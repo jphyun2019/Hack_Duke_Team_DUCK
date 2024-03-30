@@ -1,12 +1,9 @@
 import json
-
-
-
 import requests
 
 url = "https://transloc-api-1-2.p.rapidapi.com/arrival-estimates.json"
 
-querystring = {"agencies":"176","stops":"4117202","callback":"call"}
+querystring = {"agencies":"176","routes":"4008330","stops":"4267588"}
 
 headers = {
 	"X-RapidAPI-Key": "65629c31edmsh02d5f387dd070adp1f7446jsn27d7cb0cb7cc",
@@ -20,7 +17,7 @@ print(response.json())
 mydict = response.json()["data"]
 
 
-with open('raw.json', 'w') as f:
+with open('raw4.json', 'w') as f:
     json.dump(mydict, f)
 
 
